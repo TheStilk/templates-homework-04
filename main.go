@@ -12,7 +12,9 @@ import (
 
 func main() {
 	fmt.Printf("Transport Factory System\n")
-	fmt.Printf("Now u have available types like:\n(car, motorcycle, truck, bus)\n")
+	fmt.Printf(
+		"Now u have available types like:\n(car, motorcycle, truck, bus)\n",
+	)
 	fmt.Print("Enter vehicle type: ")
 
 	reader := bufio.NewReader(os.Stdin)
@@ -31,7 +33,7 @@ func main() {
 		fuel, _ := reader.ReadString('\n')
 		vehicleFactory = factory.NewCarFactory(
 			strings.TrimSpace(brand),
-			strings.TrimSpace(model), 
+			strings.TrimSpace(model),
 			strings.TrimSpace(fuel),
 		)
 

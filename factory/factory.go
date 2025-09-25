@@ -1,3 +1,4 @@
+// Package factory
 package factory
 
 import (
@@ -9,9 +10,9 @@ type VehicleFactory func() vehicle.Vehicle
 func NewCarFactory(brand, model, fuel string) VehicleFactory {
 	return func() vehicle.Vehicle {
 		return &vehicle.Car{
-			Brand:  brand,
-			Model:  model,
-			Fuel:   fuel,
+			Brand: brand,
+			Model: model,
+			Fuel:  fuel,
 		}
 	}
 }

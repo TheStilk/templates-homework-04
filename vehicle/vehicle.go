@@ -1,3 +1,4 @@
+// Package vehicle
 package vehicle
 
 import "fmt"
@@ -8,9 +9,9 @@ type Vehicle interface {
 }
 
 type Car struct {
-	Brand  string
-	Model  string
-	Fuel   string
+	Brand string
+	Model string
+	Fuel  string
 }
 
 func (c *Car) Drive() {
